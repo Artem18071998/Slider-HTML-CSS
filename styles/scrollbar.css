@@ -21,19 +21,16 @@
     opacity: 0.4;
     border-radius: var(--scrollbar-radius);
 
-    height: 100vh;
     width: var(--scrollbar-width);
     z-index: 1;
 }
 
 .scrollbar-thumb {
     position: absolute;
-    --thumb-height: 56px;
 
     border-radius: var(--scrollbar-radius);
 
     width: var(--scrollbar-width);
-    height: var(--thumb-height);
 
     background: linear-gradient(to right, #ff6a00, #ee0979);
 

@@ -8,6 +8,8 @@ function clamp(value, min, max) {
 }
 
 function initScrollbar() {
+    const margin = 8
+
     const scrollbar = document.createElement('div')
     scrollbar.className = 'scrollbar'
 
@@ -26,9 +28,9 @@ function initScrollbar() {
 
     const scrollRange = { y: bodySize.height - innerHeight }
 
-    const scrollbarHeight = (innerHeight / bodySize.height) * innerHeight
+    const scrollbarHeight = (innerHeight / bodySize.height) * innerHeight - 2 * margin
 
-    const scrollbarRange = { y: innerHeight - scrollbarHeight }
+    const scrollbarRange = { y: innerHeight - scrollbarHeight - 2 * margin }
 
     if (scrollRange.y > 0) {
         document.body.appendChild(scrollbar)
@@ -37,6 +39,11 @@ function initScrollbar() {
         let dY = 0
         let scrollbarTop = 0
         let mouseDown = false
+
+        track.style.height = `${innerHeight - 2 * margin}px`
+        thumb.style.height = `${scrollbarHeight}px`
+        scrollbar.style.top = `${margin}px`
+        scrollbar.style.left = `calc(100% - var(--scrollbar-width) - ${margin}px)`
 
         thumb.addEventListener('mousedown', () => {
             mouseDown = true
@@ -74,8 +81,7 @@ function initScrollbar() {
         }
 
         const scrollThumbDrag = e => {
-            window.scrollTo(0, window.scrollY + (dY / scrollbarRange.y) * scrollRange.y)
-            console.log(scrollbarTop)
+            window.scrollTo(0, clamp(window.scrollY + (dY / scrollbarRange.y) * scrollRange.y, 0, scrollRange.y))
         }
 
         window.addEventListener('scroll', e => {
