@@ -7,6 +7,12 @@ How to start project
 
 `npm install`
 
-2. Start `browser-sync`:
+2. Start server:
 
-`browser-sync start --server -f -w`
+    - with **CMD**:
+
+        `npm run start`
+
+    - with **PowerShell**:
+
+        `npm run start-ps1`
