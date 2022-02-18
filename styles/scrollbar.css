@@ -1,0 +1,50 @@
+.wrapper {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar {
+    position: fixed;
+    --scrollbar-width: 16px;
+    --scrollbar-radius: calc(var(--scrollbar-width) / 2);
+    top: 0;
+    left: calc(100% - var(--scrollbar-width));
+    cursor: pointer;
+}
+
+.scrollbar-track {
+    position: absolute;
+    background: #AAA;
+    opacity: 0.4;
+    border-radius: var(--scrollbar-radius);
+
+    height: 100vh;
+    width: var(--scrollbar-width);
+    z-index: 1;
+}
+
+.scrollbar-thumb {
+    position: absolute;
+    --thumb-height: 56px;
+
+    border-radius: var(--scrollbar-radius);
+
+    width: var(--scrollbar-width);
+    height: var(--thumb-height);
+
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+
+    z-index: 2;
+}
+
+.scrollbar-thumb-hover {
+    filter: brightness(0.6);
+}
+
+.scrollbar-thumb-active {
+    filter: brightness(0.4);
+}
+
