@@ -5,7 +5,7 @@ How to start project
 
 1. Install dependencies:
 
-`npm install`
+    `npm install`
 
 2. Start server:
 
