@@ -1,0 +1,24 @@
+{
+  "name": "slider-html-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "start.bat",
+    "start-ps": "start.ps1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artem18071998/Slider-HTML-CSS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Artem18071998/Slider-HTML-CSS/issues"
+  },
+  "homepage": "https://github.com/Artem18071998/Slider-HTML-CSS#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7"
+  }
+}

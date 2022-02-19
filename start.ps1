@@ -1,0 +1,1 @@
+node_modules/.bin/browser-sync start --server -f -w
